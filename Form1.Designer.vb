@@ -29,7 +29,7 @@ Partial Class Form1
         Me.LeftTextBox = New System.Windows.Forms.RichTextBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.ToggleSideButton = New System.Windows.Forms.Button()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.SelectQuantityComboBox = New System.Windows.Forms.ComboBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.RightUnitComboBox = New System.Windows.Forms.ComboBox()
         Me.RightTextbox = New System.Windows.Forms.RichTextBox()
@@ -89,11 +89,14 @@ Partial Class Form1
         'LeftUnitComboBox
         '
         Me.LeftUnitComboBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.LeftUnitComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.LeftUnitComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.LeftUnitComboBox.FormattingEnabled = True
         Me.LeftUnitComboBox.Location = New System.Drawing.Point(8, 88)
         Me.LeftUnitComboBox.Name = "LeftUnitComboBox"
         Me.LeftUnitComboBox.Size = New System.Drawing.Size(112, 21)
-        Me.LeftUnitComboBox.TabIndex = 2
+        Me.LeftUnitComboBox.TabIndex = 1
+        Me.LeftUnitComboBox.Text = "Select Unit"
         '
         'LeftTextBox
         '
@@ -109,12 +112,12 @@ Partial Class Form1
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.ToggleSideButton)
-        Me.Panel2.Controls.Add(Me.ComboBox1)
+        Me.Panel2.Controls.Add(Me.SelectQuantityComboBox)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(344, 3)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(105, 193)
-        Me.Panel2.TabIndex = 3
+        Me.Panel2.TabIndex = 1
         '
         'ToggleSideButton
         '
@@ -122,18 +125,22 @@ Partial Class Form1
         Me.ToggleSideButton.Location = New System.Drawing.Point(16, 120)
         Me.ToggleSideButton.Name = "ToggleSideButton"
         Me.ToggleSideButton.Size = New System.Drawing.Size(75, 23)
-        Me.ToggleSideButton.TabIndex = 2
+        Me.ToggleSideButton.TabIndex = 3
         Me.ToggleSideButton.Text = "Swap"
         Me.ToggleSideButton.UseVisualStyleBackColor = True
         '
-        'ComboBox1
+        'SelectQuantityComboBox
         '
-        Me.ComboBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(8, 72)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(88, 21)
-        Me.ComboBox1.TabIndex = 1
+        Me.SelectQuantityComboBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.SelectQuantityComboBox.AutoCompleteCustomSource.AddRange(New String() {"Length", "Mass", "Temperature ", "Speed", "Area", "Volume", "Time"})
+        Me.SelectQuantityComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.SelectQuantityComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
+        Me.SelectQuantityComboBox.FormattingEnabled = True
+        Me.SelectQuantityComboBox.Location = New System.Drawing.Point(0, 72)
+        Me.SelectQuantityComboBox.Name = "SelectQuantityComboBox"
+        Me.SelectQuantityComboBox.Size = New System.Drawing.Size(104, 21)
+        Me.SelectQuantityComboBox.TabIndex = 0
+        Me.SelectQuantityComboBox.Text = "Select Quantity"
         '
         'Panel3
         '
@@ -143,16 +150,19 @@ Partial Class Form1
         Me.Panel3.Location = New System.Drawing.Point(455, 3)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(336, 193)
-        Me.Panel3.TabIndex = 4
+        Me.Panel3.TabIndex = 3
         '
         'RightUnitComboBox
         '
         Me.RightUnitComboBox.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.RightUnitComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
+        Me.RightUnitComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.RightUnitComboBox.FormattingEnabled = True
         Me.RightUnitComboBox.Location = New System.Drawing.Point(216, 88)
         Me.RightUnitComboBox.Name = "RightUnitComboBox"
         Me.RightUnitComboBox.Size = New System.Drawing.Size(112, 21)
-        Me.RightUnitComboBox.TabIndex = 3
+        Me.RightUnitComboBox.TabIndex = 2
+        Me.RightUnitComboBox.Text = "Select Unit"
         '
         'RightTextbox
         '
@@ -176,7 +186,7 @@ Partial Class Form1
         Me.TableLayoutPanel3.RowCount = 1
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.TableLayoutPanel3.Size = New System.Drawing.Size(794, 219)
-        Me.TableLayoutPanel3.TabIndex = 2
+        Me.TableLayoutPanel3.TabIndex = 4
         '
         'ClearButton
         '
@@ -214,7 +224,7 @@ Partial Class Form1
     Friend WithEvents Panel2 As Panel
     Friend WithEvents RightTextbox As RichTextBox
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents SelectQuantityComboBox As ComboBox
     Friend WithEvents LeftUnitComboBox As ComboBox
     Friend WithEvents RightUnitComboBox As ComboBox
     Friend WithEvents ToggleSideButton As Button

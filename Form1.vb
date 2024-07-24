@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlTypes
+Imports System.Net.Security
 
 Public Class Form1
     Dim fromUnit As String
@@ -891,8 +892,9 @@ Public Class Form1
 }
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ComboBox1.Items.AddRange(Quantities)
+        SelectQuantityComboBox.Items.AddRange(Quantities)
 
+        SelectQuantityComboBox.DroppedDown = True
     End Sub
 
     Private Sub ToggleSideButton_Click_1(sender As Object, e As EventArgs) Handles ToggleSideButton.Click
@@ -908,35 +910,52 @@ Public Class Form1
         RightUnitComboBox.SelectedIndex = l
     End Sub
 
-    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+    Private Sub SelectQuantityComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles SelectQuantityComboBox.SelectedIndexChanged
         LeftUnitComboBox.Items.Clear()
         RightUnitComboBox.Items.Clear()
+
+        LeftUnitComboBox.AutoCompleteCustomSource.Clear()
+        RightUnitComboBox.AutoCompleteCustomSource.Clear()
 
         LeftUnitComboBox.Text = Nothing
         RightUnitComboBox.Text = Nothing
 
-        Select Case ComboBox1.SelectedItem
+        Select Case SelectQuantityComboBox.SelectedItem
             Case "Length"
                 Quantity = "Length"
                 LoadItems(Length_units)
+                LeftUnitComboBox.AutoCompleteCustomSource.AddRange(Length_units)
+                RightUnitComboBox.AutoCompleteCustomSource.AddRange(Length_units)
             Case "Mass"
                 Quantity = "Mass"
                 LoadItems(Mass_units)
+                LeftUnitComboBox.AutoCompleteCustomSource.AddRange(Mass_units)
+                RightUnitComboBox.AutoCompleteCustomSource.AddRange(Mass_units)
             Case "Speed"
                 Quantity = "Speed"
                 LoadItems(Speed_units)
+                LeftUnitComboBox.AutoCompleteCustomSource.AddRange(Speed_units)
+                RightUnitComboBox.AutoCompleteCustomSource.AddRange(Speed_units)
             Case "Temperature"
                 Quantity = "Temperature"
                 LoadItems(Temperature_units)
+                LeftUnitComboBox.AutoCompleteCustomSource.AddRange(Temperature_units)
+                RightUnitComboBox.AutoCompleteCustomSource.AddRange(Temperature_units)
             Case "Area"
                 Quantity = "Area"
                 LoadItems(Area_units)
+                LeftUnitComboBox.AutoCompleteCustomSource.AddRange(Area_units)
+                RightUnitComboBox.AutoCompleteCustomSource.AddRange(Area_units)
             Case "Volume"
                 Quantity = "Volume"
                 LoadItems(Volume_units)
+                LeftUnitComboBox.AutoCompleteCustomSource.AddRange(Volume_units)
+                RightUnitComboBox.AutoCompleteCustomSource.AddRange(Volume_units)
             Case "Time"
                 Quantity = "Time"
                 LoadItems(Time_units)
+                LeftUnitComboBox.AutoCompleteCustomSource.AddRange(Time_units)
+                RightUnitComboBox.AutoCompleteCustomSource.AddRange(Time_units)
             Case Else
                 Exit Sub
         End Select
@@ -999,6 +1018,26 @@ Public Class Form1
 
     Private Sub LeftTextBox_TextChanged(sender As Object, e As EventArgs) Handles LeftTextBox.TextChanged
         Convert()
+    End Sub
+
+    Private Sub LeftTextBox_KeyPress(sender As Object, e As KeyPressEventArgs) Handles LeftTextBox.KeyPress
+        ' control characters 
+        If Char.IsControl(e.KeyChar) Then
+            Return
+        End If
+
+        ' numeric characters
+        If Char.IsDigit(e.KeyChar) Then
+            Return
+        End If
+
+        ' allow one decimal point
+        If e.KeyChar = "."c AndAlso Not LeftTextBox.Text.Contains(".") Then
+            Return
+        End If
+
+        ' Disallow all other characters
+        e.Handled = True
     End Sub
 
     Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles ClearButton.Click
