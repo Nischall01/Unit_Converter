@@ -1,7 +1,7 @@
 ﻿Imports System.Data.SqlTypes
 Imports System.Net.Security
 
-Public Class Form1
+Public Class MainForm
     Dim fromUnit As String
     Dim toUnit As String
 

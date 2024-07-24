@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class MainForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -56,25 +56,25 @@ Partial Class Form1
         Me.TableLayoutPanel1.RowCount = 2
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(800, 450)
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(754, 281)
         Me.TableLayoutPanel1.TabIndex = 0
         '
         'TableLayoutPanel2
         '
         Me.TableLayoutPanel2.ColumnCount = 3
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 18.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 41.0!))
         Me.TableLayoutPanel2.Controls.Add(Me.Panel1, 0, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.Panel2, 1, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.Panel3, 2, 0)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 3)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 2
+        Me.TableLayoutPanel2.RowCount = 1
         Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(794, 219)
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 134.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(748, 134)
         Me.TableLayoutPanel2.TabIndex = 1
         '
         'Panel1
@@ -84,7 +84,7 @@ Partial Class Form1
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(3, 3)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(335, 193)
+        Me.Panel1.Size = New System.Drawing.Size(300, 128)
         Me.Panel1.TabIndex = 2
         '
         'LeftUnitComboBox
@@ -93,7 +93,7 @@ Partial Class Form1
         Me.LeftUnitComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.LeftUnitComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.LeftUnitComboBox.FormattingEnabled = True
-        Me.LeftUnitComboBox.Location = New System.Drawing.Point(8, 88)
+        Me.LeftUnitComboBox.Location = New System.Drawing.Point(8, 58)
         Me.LeftUnitComboBox.Name = "LeftUnitComboBox"
         Me.LeftUnitComboBox.Size = New System.Drawing.Size(112, 21)
         Me.LeftUnitComboBox.TabIndex = 1
@@ -103,10 +103,10 @@ Partial Class Form1
         '
         Me.LeftTextBox.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.LeftTextBox.Font = New System.Drawing.Font("Franklin Gothic Medium", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LeftTextBox.Location = New System.Drawing.Point(128, 48)
+        Me.LeftTextBox.Location = New System.Drawing.Point(124, 18)
         Me.LeftTextBox.Multiline = False
         Me.LeftTextBox.Name = "LeftTextBox"
-        Me.LeftTextBox.Size = New System.Drawing.Size(196, 96)
+        Me.LeftTextBox.Size = New System.Drawing.Size(173, 96)
         Me.LeftTextBox.TabIndex = 2
         Me.LeftTextBox.Text = ""
         '
@@ -115,15 +115,15 @@ Partial Class Form1
         Me.Panel2.Controls.Add(Me.ToggleSideButton)
         Me.Panel2.Controls.Add(Me.SelectQuantityComboBox)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Location = New System.Drawing.Point(344, 3)
+        Me.Panel2.Location = New System.Drawing.Point(309, 3)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(105, 193)
+        Me.Panel2.Size = New System.Drawing.Size(128, 128)
         Me.Panel2.TabIndex = 1
         '
         'ToggleSideButton
         '
         Me.ToggleSideButton.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.ToggleSideButton.Location = New System.Drawing.Point(16, 120)
+        Me.ToggleSideButton.Location = New System.Drawing.Point(28, 88)
         Me.ToggleSideButton.Name = "ToggleSideButton"
         Me.ToggleSideButton.Size = New System.Drawing.Size(75, 23)
         Me.ToggleSideButton.TabIndex = 3
@@ -137,9 +137,9 @@ Partial Class Form1
         Me.SelectQuantityComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.SelectQuantityComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.SelectQuantityComboBox.FormattingEnabled = True
-        Me.SelectQuantityComboBox.Location = New System.Drawing.Point(0, 72)
+        Me.SelectQuantityComboBox.Location = New System.Drawing.Point(17, 40)
         Me.SelectQuantityComboBox.Name = "SelectQuantityComboBox"
-        Me.SelectQuantityComboBox.Size = New System.Drawing.Size(104, 21)
+        Me.SelectQuantityComboBox.Size = New System.Drawing.Size(96, 21)
         Me.SelectQuantityComboBox.TabIndex = 0
         Me.SelectQuantityComboBox.Text = "Select Quantity"
         '
@@ -148,9 +148,9 @@ Partial Class Form1
         Me.Panel3.Controls.Add(Me.RightUnitComboBox)
         Me.Panel3.Controls.Add(Me.RightTextbox)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel3.Location = New System.Drawing.Point(455, 3)
+        Me.Panel3.Location = New System.Drawing.Point(443, 3)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(336, 193)
+        Me.Panel3.Size = New System.Drawing.Size(302, 128)
         Me.Panel3.TabIndex = 3
         '
         'RightUnitComboBox
@@ -159,9 +159,9 @@ Partial Class Form1
         Me.RightUnitComboBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.RightUnitComboBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource
         Me.RightUnitComboBox.FormattingEnabled = True
-        Me.RightUnitComboBox.Location = New System.Drawing.Point(216, 88)
+        Me.RightUnitComboBox.Location = New System.Drawing.Point(192, 53)
         Me.RightUnitComboBox.Name = "RightUnitComboBox"
-        Me.RightUnitComboBox.Size = New System.Drawing.Size(112, 21)
+        Me.RightUnitComboBox.Size = New System.Drawing.Size(104, 21)
         Me.RightUnitComboBox.TabIndex = 2
         Me.RightUnitComboBox.Text = "Select Unit"
         '
@@ -169,10 +169,10 @@ Partial Class Form1
         '
         Me.RightTextbox.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.RightTextbox.Font = New System.Drawing.Font("Franklin Gothic Medium", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RightTextbox.Location = New System.Drawing.Point(8, 48)
+        Me.RightTextbox.Location = New System.Drawing.Point(5, 16)
         Me.RightTextbox.Name = "RightTextbox"
         Me.RightTextbox.ReadOnly = True
-        Me.RightTextbox.Size = New System.Drawing.Size(196, 96)
+        Me.RightTextbox.Size = New System.Drawing.Size(183, 96)
         Me.RightTextbox.TabIndex = 3
         Me.RightTextbox.Text = ""
         '
@@ -182,31 +182,34 @@ Partial Class Form1
         Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.0!))
         Me.TableLayoutPanel3.Controls.Add(Me.ClearButton, 0, 0)
         Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 228)
+        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 143)
         Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
         Me.TableLayoutPanel3.RowCount = 1
         Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(794, 219)
+        Me.TableLayoutPanel3.Size = New System.Drawing.Size(748, 135)
         Me.TableLayoutPanel3.TabIndex = 4
         '
         'ClearButton
         '
         Me.ClearButton.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.ClearButton.Location = New System.Drawing.Point(359, 98)
+        Me.ClearButton.Location = New System.Drawing.Point(336, 56)
         Me.ClearButton.Name = "ClearButton"
         Me.ClearButton.Size = New System.Drawing.Size(75, 23)
         Me.ClearButton.TabIndex = 0
         Me.ClearButton.Text = "Clear"
         Me.ClearButton.UseVisualStyleBackColor = True
         '
-        'Form1
+        'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.ClientSize = New System.Drawing.Size(754, 281)
         Me.Controls.Add(Me.TableLayoutPanel1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.Name = "Form1"
+        Me.MinimumSize = New System.Drawing.Size(770, 320)
+        Me.Name = "MainForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Unit Converter"
         Me.TableLayoutPanel1.ResumeLayout(False)
         Me.TableLayoutPanel2.ResumeLayout(False)
