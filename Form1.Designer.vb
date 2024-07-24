@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -126,7 +127,7 @@ Partial Class Form1
         Me.ToggleSideButton.Name = "ToggleSideButton"
         Me.ToggleSideButton.Size = New System.Drawing.Size(75, 23)
         Me.ToggleSideButton.TabIndex = 3
-        Me.ToggleSideButton.Text = "Swap"
+        Me.ToggleSideButton.Text = "Swap Units"
         Me.ToggleSideButton.UseVisualStyleBackColor = True
         '
         'SelectQuantityComboBox
@@ -204,6 +205,7 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "Form1"
         Me.Text = "Unit Converter"
         Me.TableLayoutPanel1.ResumeLayout(False)
